@@ -1,9 +1,9 @@
-#Framework
+# Framework
 
-##Introdução
+## Introdução
 Um dos temas mais importantes, e discutidos, na área do desenvolvimento de softwares, é a otimização de tempo e de recursos, como alcançá-los favorecendo a maior eficiência, garantindo qualidade, segurança, no menor espaço de tempo. Isso nos remete a um dos maiores e melhores recursos na área da programação, ao qual estaremos introduzindo a seguir: os Frameworks.
 
-##O que é um Framework?
+## O que é um Framework?
 Framework é um conjunto de bibliotecas, que abordam funcionalidades, e estruturas, para o desenvolvimento de aplicações, a fim de fornecer soluções para um mesmo domínio de problema, permitindo a reutilização do seu código. Assim, através das diversas linguagens de programação, os Frameworks são criados e identificados pelas metodologias, propósitos, e implementações, aos quais os diversos tipos de aplicações, na maioria orientadas a objetos, poderão reutilizar suas estruturas e códigos.
 
 Um Framework é formado por um conjunto classes implementadas em uma determinada linguagem de programação, que fornece recursos comuns já prontos, validados e testados, os quais podem ser usados para auxiliar o desenvolvimento de software, viabilizando maior eficiência na resolução dos problemas, otimização de recursos, e detecção de erros. Ele fornece um modelo de dados, usados para resolver um problema específico, abstraindo parte do código das soluções que estamos tratando.
@@ -16,21 +16,21 @@ Hot-Spots – são as partes específicas de sistemas individuais, projetados pa
 
 Frozen-Spots - definem a arquitetura geral de um sistema de software, seus componentes básicos e os relacionamentos entre eles, imutáveis em todas as instanciações do Framework.
 
-##Qual é a diferença entre um Framework e uma Biblioteca?
+##  Qual é a diferença entre um Framework e uma Biblioteca?
 A fim de fornecer uma melhor distinção sobre um Framework, devemos esclarecer alguns fundamentos de uma Biblioteca, ou Library, com o propósito de evitar qualquer tipo de confusão entre eles, e que também irá nos fornecer um melhor entendimento sobre um Framework.
 
 Uma Biblioteca é uma coleção de implementações, escritas sob os termos de uma certa linguagem, fornecendo recursos, independentes, para determinado comportamento ser executado em uma aplicação. Assim, o programa invoca o comportamento fornecido por meio de um mecanismo da linguagem, possuindo assim o controle sobre os recursos fornecidos pela biblioteca.
 
 Já um Framework é um conjunto de classes e interfaces que impõe um modelo colaborativo e um padrão de interação ao qual o nosso programa deverá se adaptar, as dependências entre as classes são embutidas, com a comunicação entre os objetos já definida. Então o Framework possui a responsabilidade para definir o comportamento da aplicação e chamar cada método, ou seja é o Framework que chama o código da nossa aplicação, e é ele quem tem o controle sobre a nossa aplicação, definindo o seu comportamento e o fluxo de controle da aplicação, esse conceito é chamado de Inversão de Controle.
 
-##Tipos de Frameworks.
+## Tipos de Frameworks.
 Framework de Suporte ⇒ Disponibiliza serviços para sistemas operacionais, e como nosso objetivo principal é a informação de dados técnicos para desenvolvimento de softwares, não será detalhado neste artigo.
 
 Framework de aplicação ⇒ Também chamado de Framework Horizontal, encapsula conhecimentos aplicáveis a vários tipos de aplicações, ou seja, eles podem ser usados em diferentes domínios, sem qualquer dependência dos mesmos. Ele resolve apenas uma parte da solução do problema, como por exemplo framework para construção de interface GUI ou interface gráfica.
 
 Framework de domínio ⇒ Também chamado de Framework Vertical, ou Framework Especialista, encapsula conhecimentos aplicáveis a aplicações com um domínio particular em comum, obtidos através de um determinado contexto específico. Ele resolve boa parte da aplicação, e temos como exemplo um Framework para aplicações de controle financeiro.
 
-##Quais maneiras de se utilizar um Framework?
+## Quais maneiras de se utilizar um Framework?
 Inheritance-focused ⇒ white-box ou architecture-driven, possibilitam o reuso por herança e associação dinâmica, entendendo o funcionamento do framework, ou seja, estende ou modifica a funcionalidade pela definição de sub-classes com override de métodos.
 
 Composition-focused ⇒ black-box ou data-driven, usa a funcionalidade já presente no framework, abstraindo o código interno do Framework, que permanece inalterado, obrigando a utilização das interfaces fornecidas. O comportamento da aplicação é definido pelas instanciações e composições do Framework, tornando-se Component-Oriented (COFW).
@@ -39,7 +39,7 @@ Hybrid ⇒ gray-box, utilizam do tipo inheritance-focused com algumas funcionali
 
 Injeção de dependência ⇒ é um padrão de desenvolvimento utilizado quando é necessário manter baixo o nível de acoplamento entre diferentes módulos de um sistema, onde as dependências não são codificadas, mas configuradas através de uma estrutura de software (container), responsável por "injetar", em cada componente, as dependências declaradas. Ela se relaciona com o padrão Inversão de controle, presente nos Frameworks, fazendo a conexão entre os diferentes elementos.
 
-##5 Frameworks Backend.
+## 5 Frameworks Backend.
 Spring ⇒ É um framework open source para a plataforma Java criado por Rod Johnson, baseado nos padrões de projeto inversão de controle (IoC) e injeção de dependência, onde o container se encarrega de instanciar as classes, e define as dependências através de um arquivo de configuração em formato XML, com módulos voltados para desenvolvimento Web, persistência, acesso remoto e programação orientada a aspectos.
 
 https://spring.io/
@@ -81,12 +81,12 @@ Ember.js ⇒ É um framework web JavaScript, de código aberto, desenvolvido por
 
 https://emberjs.com/
 
-##Referências
+## Referências
 
-Fundamentos do C#, balta.io
+. Fundamentos do C#, balta.io
 
-http://www.dsc.ufcg.edu.br/~jacques/cursos/map/html/frame/oque.htm
+. http://www.dsc.ufcg.edu.br/~jacques/cursos/map/html/frame/oque.htm
 
-https://edisciplinas.usp.br/pluginfile.php/4101209/mod_resource/content/1/Aula4a-RosanaFrameworks.pdf
+. https://edisciplinas.usp.br/pluginfile.php/4101209/mod_resource/content/1/Aula4a-RosanaFrameworks.pdf
 
-http://www.ic.uff.br/~anselmo/cursos/ProjSoft/apresentacoes/Fram
+. http://www.ic.uff.br/~anselmo/cursos/ProjSoft/apresentacoes/Fram
