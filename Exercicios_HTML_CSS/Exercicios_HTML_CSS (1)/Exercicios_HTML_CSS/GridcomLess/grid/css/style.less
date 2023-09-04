@@ -1,0 +1,162 @@
+/* ==========================================================================
+   Normatização CSS
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #444;
+    font-family: "Segoe WP", "Segoe UI", Segoe, Geneva, Tahoma, sans-serif;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+body {
+    font-size: 62.5%;
+}
+
+h1, h2, h3, h5, h6 {
+	font-weight: normal;
+}
+
+b {
+	font-weight: 700;
+}
+
+/* ==|=======================================================================
+   Grid //  http://semantic.gs/ 
+   ========================================================================== */
+
+/*Altere estes valores de acordo com a largura das colunas, largura das margens e o número de colunas do seu grid.*/
+@column-width: 60;
+@gutter-width: 20;
+@columns: 12;
+
+
+@gridsystem-width: (@column-width*@columns) + (@gutter-width*@columns) * 1px;
+
+/*Delete a linha abaixo se desejar trabalhar com valores em pixel.*/
+@total-width: 100%;
+
+.clearfix() {
+	*zoom:1;
+	
+	&:before,
+	&:after {
+	    content:"";
+	    display:table;
+	}
+	&:after {
+	    clear:both;
+	}
+}
+
+body {
+	width: 100%;
+	.clearfix;
+}
+
+.row(@columns:@columns) {
+	display: block;
+	width: @total-width*((@gutter-width + @gridsystem-width)/@gridsystem-width);
+	margin: 0 @total-width*(((@gutter-width*.5)/@gridsystem-width)*-1);
+	.clearfix;
+}
+.column(@x,@columns:@columns) {
+	display: inline;
+	float: left;
+	width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
+	margin: 0 @total-width*((@gutter-width*.5)/@gridsystem-width);
+	}
+	
+.push(@offset:1) {
+	margin-left: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+.pull(@offset:1) {
+	margin-right: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+/*Determine a largura do seu container.*/
+.wrap {
+	max-width: 960px;
+	margin: 0 auto;
+}
+   
+/* ==|=======================================================================
+  Layout 
+   ========================================================================== */
+
+h1 {
+	color: #FFF;
+	font-size: 2.4em;
+	margin-left: 1em;
+	font-weight: normal;
+}
+
+.cabecalho, .footer{
+	.column(12);
+	background: red;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.conteudo{
+	.column(8);
+	background: #444;
+	height: 500px;
+}
+
+.sidebar{
+	.column(4);
+	background: #444;
+	height: 500px;
+}
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+
+@media  screen and (max-width: 480px) {
+	.conteudo, .sidebar {
+		.column(12);
+	}
+	
+	.conteudo {
+		margin-bottom: 1em;
+	}
+}
+

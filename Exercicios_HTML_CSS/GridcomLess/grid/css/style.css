@@ -1,0 +1,121 @@
+/* ==========================================================================
+   Normatização CSS
+   ========================================================================== */
+html,
+button,
+input,
+select,
+textarea {
+  color: #444;
+  font-family: "Segoe WP", "Segoe UI", Segoe, Geneva, Tahoma, sans-serif;
+}
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+img {
+  vertical-align: middle;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+textarea {
+  resize: vertical;
+}
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+body {
+  font-size: 62.5%;
+}
+h1,
+h2,
+h3,
+h5,
+h6 {
+  font-weight: normal;
+}
+b {
+  font-weight: 700;
+}
+/* ==|=======================================================================
+   Grid //  http://semantic.gs/ 
+   ========================================================================== */
+/*Altere estes valores de acordo com a largura das colunas, largura das margens e o número de colunas do seu grid.*/
+/*Delete a linha abaixo se desejar trabalhar com valores em pixel.*/
+body {
+  width: 100%;
+  *zoom: 1;
+}
+body:before,
+body:after {
+  content: "";
+  display: table;
+}
+body:after {
+  clear: both;
+}
+/*Determine a largura do seu container.*/
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+}
+/* ==|=======================================================================
+  Layout 
+   ========================================================================== */
+h1 {
+  color: #FFF;
+  font-size: 2.4em;
+  margin-left: 1em;
+  font-weight: normal;
+}
+.cabecalho,
+.footer {
+  display: inline;
+  float: left;
+  width: 97.91666666666666%;
+  margin: 0 1.0416666666666665%;
+  background: red;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.conteudo {
+  display: inline;
+  float: left;
+  width: 64.58333333333334%;
+  margin: 0 1.0416666666666665%;
+  background: #444;
+  height: 500px;
+}
+.sidebar {
+  display: inline;
+  float: left;
+  width: 31.25%;
+  margin: 0 1.0416666666666665%;
+  background: #444;
+  height: 500px;
+}
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media screen and (max-width: 480px) {
+  .conteudo,
+  .sidebar {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
+  .conteudo {
+    margin-bottom: 1em;
+  }
+}
