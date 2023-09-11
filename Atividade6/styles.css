@@ -1,0 +1,59 @@
+.container {
+    width: 500px;
+    height: 500px;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#colorName {
+    font-size: 2em;
+    color: white;
+}
+
+/* Media Queries */
+@media (min-width: 1367px) {
+    .container {
+        background-color: yellow;
+    }
+    #colorName::after {
+        content: "Amarelo";
+    }
+}
+
+@media (min-width: 1081px) and (max-width: 1366px) {
+    .container {
+        background-color: lightcoral;
+    }
+    #colorName::after {
+        content: "Coral Claro";
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1080px) {
+    .container {
+        background-color: plum;
+    }
+    #colorName::after {
+        content: "Rosa Mais escuro";
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        background-color: orange;
+    }
+    #colorName::after {
+        content: "Laranja";
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        background-color: grey;
+    }
+    #colorName::after {
+        content: "Cinza";
+    }
+}
