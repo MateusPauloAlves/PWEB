@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo Classes </title>
+</head>
+
+<body>
+
+    <script>
+        // exemplo1 - classe com nome
+        class Quadrado {
+            constructor(lado) {
+                this.lado = lado;
+
+            }
+            calculaArea() {
+                return this.lado * this.lado;
+            }
+        };
+
+
+        // exemplo2 - expressao de classe sem nome
+        let Quadrado1 = class {
+            constructor(lado) {
+                this.lado = lado;
+            }
+            calculaArea() {
+                return (this.lado * this.lado);
+            }
+        };
+
+
+        //  exemplo3 -  classe com nome com atributo sem receber parâmetros no constructor
+        class Quadrado2 {
+            #_descricao; // encapsulamento válido a partir do ES9
+            constructor() {
+                this._lado; // encapsulamento
+            }
+            get lado() {
+                return this._lado;
+            }
+            set lado(value) {
+                this._lado = value;
+            }
+
+            calculaArea() {
+                return (this._lado * this._lado);
+            }
+            set descricao(value) {
+               this._desricao = value;               
+            }
+            get descricao() {
+                return this._descricao;
+            }
+        }
+
+        objQuadrado = new Quadrado(3);
+        alert("exemplo1:" + objQuadrado.calculaArea());
+
+        objQuadrado1 = new Quadrado1(3);
+        alert("exemplo2:" + objQuadrado1.calculaArea());
+
+        objQuadrado2 = new Quadrado2();
+        objQuadrado2.lado = 3;
+        alert("exemplo3:" + objQuadrado2.calculaArea())
+        objQuadrado2._descricao = "quadrado azul";
+        alert("exemplo3=" + objQuadrado2.descricao);
+    </script>
+
+</body>
+
+</html>

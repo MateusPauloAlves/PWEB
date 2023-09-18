@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        if (undefined==0)
+        alert("verdadeiro");
+        
+        function soma() {
+  return [...arguments].reduce((sum, nr) => sum + nr, 0);
+}
+//O método reduce() executa uma função reducer
+//(fornecida por você) 
+//para cada elemento do array, resultando num único valor de retorno.
+       var arr1 = [1, 2,3, 4];
+        alert(soma(...arr1));
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo Classes </title>
+</head>
+
+<body>
+
+    <script>
+        {
+            class Retangulo {
+                constructor(altura, largura) {
+                    this.altura = altura;
+                    this.largura = largura;
+                }
+
+                calculaArea() {
+                    return this.altura * this.largura;
+                }
+            }
+
+            objRetangulo = new Retangulo(10, 5);
+
+            alert(objRetangulo.calculaArea());
+
+        }
+    </script>
+
+</body>
+
+</html>

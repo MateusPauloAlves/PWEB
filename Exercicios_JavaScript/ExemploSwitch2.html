@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let ano = parseInt(prompt("Qual seu ano de nascimento?"));
+
+        let teste = true
+
+        switch (teste) {
+
+            case ano <= 1945:
+                console.log('Geração silenciosa');
+                break;
+
+            case ano > 1945 && ano <= 1964:
+                console.log('Boomers');
+                break;
+
+            case ano > 1964 && ano <= 1980:
+                console.log('Geração X');
+                break;
+
+            case ano > 1980 && ano <= 1996:
+                console.log('Millennials');
+                break;
+
+            case ano > 1996 && ano <= 2009:
+                console.log('Geração Z');
+                break;
+            default:
+                console.log('Geração Alfa???');
+        }
+
+    </script>
+</body>
+
+</html>

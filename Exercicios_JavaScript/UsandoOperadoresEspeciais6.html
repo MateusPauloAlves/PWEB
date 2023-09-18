@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Testando this</title>
+
+</head>
+
+<body>
+    <script>
+        var texto = null ?? 'padrão 1';
+        alert(texto); // retorna padrão 1
+
+        var numero = 0 ?? 55;
+        alert(numero); // retorna 0
+        
+        var x;
+        x = undefined ?? 99;
+        alert(x); // retorna 99
+        
+        var  texto2=null;
+        alert(texto2 = null??'padrão2'); // retorna padrão2
+            
+    </script>
+
+</body>
+
+</html>

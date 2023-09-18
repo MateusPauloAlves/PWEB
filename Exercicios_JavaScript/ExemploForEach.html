@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FOREACH</title>
+</head>
+
+<body>
+
+
+    <script>
+        
+        var arrayExemplo = [1, 2, 3, 4];
+
+        function NumeroPar(num) {
+            if (num % 2 == 0)
+                alert(num);
+        }
+
+        arrayExemplo.forEach(NumeroPar);
+
+
+        var arrayExemplo2 = [1, 2, 3, 4];
+
+        arrayExemplo2.forEach(function NumeroPar(num) {
+                    if (num % 2 == 0)
+                        alert(num);
+                });
+        
+        
+        var arrayExemplo3 = [1, 2, 3, 4];
+
+        arrayExemplo3.forEach(num => {
+                    if (num % 2 == 0)
+                        alert(num);
+                });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo Classes </title>
+</head>
+
+<body>
+
+    <script>
+        {
+
+            class Animal {
+                constructor(nome) {
+                    this.nome = nome;
+                }
+
+                som() {
+                    alert(this.nome + ' emite som ');
+                }
+            }
+
+            class Galinha extends Animal {
+                som() {
+                    alert(this.nome + ' cacareja ');
+                }
+            }
+
+
+            class GalinhaAngola extends Galinha {
+                som() {
+                    alert(this.nome + ' fala tô fraco ');
+                }
+            }
+
+           var objGalinha = new Galinha('Leka');
+            objGalinha.som();
+
+            var objGalinha2 = new GalinhaAngola('Gray');
+            objGalinha2.som();
+
+        
+        }
+    </script>
+
+</body>
+
+</html>

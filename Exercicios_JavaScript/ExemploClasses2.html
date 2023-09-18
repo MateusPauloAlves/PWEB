@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo Classes </title>
+</head>
+
+<body>
+
+    <script>
+        {
+            class Retangulo {
+                constructor() {
+                    this._altura;
+                    this._largura;
+                }
+
+                 // ATRIBUTOS NAO PODEM TER OS MESMOS NOMES DE GET/SET E METODOS
+                
+                get altura() {
+                    return this._altura;
+                }
+
+                get largura() {
+                    return this._largura;
+                }
+
+                set altura(value) {
+                    this._altura = value;
+                }
+
+                set largura(value) {
+                    this._largura = value;
+                }
+
+
+
+                calculaArea() {
+                    return this.altura * this.largura;
+                }
+            }
+
+            objRetangulo = new Retangulo();
+            objRetangulo.altura = 50;
+            objRetangulo.largura = 20;
+            alert(objRetangulo.calculaArea());
+            alert("altura="+objRetangulo.altura+ " largura="+objRetangulo.largura);
+        }
+    </script>
+
+</body>
+
+</html>

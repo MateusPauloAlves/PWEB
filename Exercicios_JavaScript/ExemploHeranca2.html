@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo Heranca </title>
+</head>
+
+<body>
+
+    <script>
+        
+            class Poligono {
+                constructor(comprimento) {
+                    this.comprimento = comprimento;
+                    this.nome = "Polígono";
+                }
+            }
+
+            class Quadrado extends Poligono {
+                constructor(comprimento,nome) {
+                    // super chama o construtor da classe pai que vai atribuir comprimento para
+                    // os atributos comprimento e altura herdados pela nossa classe filha Quadrado
+                    super(comprimento);
+                    // Nas classes filhas, super() deve ser chamado antes de usar o this. Sem ele
+                    // vai ocorrer um erro de referência. O this agora se refere a classe filha Quadrado
+                    this.nome = nome;
+                }
+
+                areaQuadrado = function() {
+                    return (this.comprimento * this.comprimento);
+                }
+            }
+
+            var objQuadrado = new Quadrado(2, "Quadrado Vermelho");
+            alert(objQuadrado.areaQuadrado());
+            alert(objQuadrado.nome);
+    </script>
+
+</body>
+
+</html>
