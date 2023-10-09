@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Opinião sobre um Filme</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulário de Opinião sobre um Filme</h1>
+        <form method="post">
+            <div class="campo">
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" required>
+            </div>
+            <div class="campo">
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo" required>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label>Opinião sobre o Filme:</label>
+                <div>
+                    <label>
+                        <input type="radio" name="opiniao" value="4"> Ótimo
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="opiniao" value="3"> Bom
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="opiniao" value="2"> Regular
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="opiniao" value="1"> Péssimo
+                    </label>
+                </div>
+            </div>
+            <button type="submit">Enviar Opinião</button>
+        </form>
+    </div>
+
+</body>
+</html>
