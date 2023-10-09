@@ -1,67 +1,87 @@
-var matrizObj = new Array(3);
-var somaIdades = 0;
-
-
 document.addEventListener('DOMContentLoaded', function() {
     const formulario = document.querySelector('form');
+
+    let totalIdade = 0;
+    let idadeMaisNova = Infinity;
+    let idadeMaisVelha = 0;
+    let totalPessimo = 0;
+    let totalOtimoBom = 0;
+    let totalMulheres = 0;
+    let totalHomens = 0;
+    let totalPessoas = 0;
 
     formulario.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const idade = document.getElementById('idade').value;
+        const idade = parseInt(document.getElementById('idade').value);
         const sexo = document.getElementById('sexo').value;
-        const opiniao = document.querySelector('input[name="opiniao"]:checked').value;
+        const opiniao = parseInt(document.querySelector('input[name="opiniao"]:checked').value);
 
-        somaIdades += idade;
+        totalIdade += idade;
 
-        var obj = {
-            idade,
-            sexo,
-            opiniao
-        }
-        matrizObj.push(obj);
-
-        if(matrizObj.length == 3){
-            mostraTudo();
+        if (idade > idadeMaisVelha) {
+            idadeMaisVelha = idade;
         }
 
+        if (idade < idadeMaisNova) {
+            idadeMaisNova = idade;
+        }
 
-        console.log(`Idade: ${idade}, Sexo: ${sexo}, Opinião: ${opiniao}`);
+        if (opiniao === 1) {
+            totalPessimo++;
+        } else if (opiniao === 4 || opiniao === 3) {
+            totalOtimoBom++;
+        }
+
+        if (sexo === 'feminino') {
+            totalMulheres++;
+        } else {
+            totalHomens++;
+        }
+
+        totalPessoas++;
+
+        // Atualize os cálculos e exiba os resultados
+    });
+
+    function calcularMediaIdade() {
+        return totalIdade / totalPessoas;
+    }
+
+    function getIdadeMaisNova() {
+        return idadeMaisNova;
+    }
+
+    function getIdadeMaisVelha() {
+        return idadeMaisVelha;
+    }
+
+    function getPessoasPessimo() {
+        return totalPessimo;
+    }
+
+    function getPorcentagemOtimoBom() {
+        return (totalOtimoBom / totalPessoas) * 100;
+    }
+
+    function getNumMulheres() {
+        return totalMulheres;
+    }
+
+    function getNumHomens() {
+        return totalHomens;
+    }
+
+    // Exemplo de como usar as funções:
+    formulario.addEventListener('submit', function(event) {
+        event.preventDefault();
+        console.clear();
+        console.log(`Média da idade: ${calcularMediaIdade()}`);
+        console.log(`Idade da pessoa mais nova: ${getIdadeMaisNova()}`);
+        console.log(`Idade da pessoa mais velha: ${getIdadeMaisVelha()}`);
+        console.log(`Quantidade de pessoas que responderam péssimo: ${getPessoasPessimo()}`);
+        console.log(`Porcentagem de pessoas que responderam ótimo/bom: ${getPorcentagemOtimoBom()}%`);
+        console.log(`Número de mulheres que responderam: ${getNumMulheres()}`);
+        console.log(`Número de homens que responderam: ${getNumHomens()}`);
     });
 });
-
-function mediaIdade(numeroPessoasTotal, somaIdades) {
-    return somaIdades/numeroPessoasTotal;
-}
-
-function maisVelha(pessoas) {
-    maisVelho = pessoas[0].idade;
-    for(i = 1; i < pessoas.lenght; i++){
-        if(maisVelho < pessoas[i].idade){
-            maisVelho = pessoas[i].idade;
-        }
-    }
-
-    return maisVelho
-}
-
-function maisNova(pessoas) {
-    maisNovo = pessoas[0].idade;
-    for(i = 1; i < pessoas.lenght; i++){
-        if(maisNovo > pessoas[i].idade){
-            maisNovo = pessoas[i].idade;
-        }
-    }
-
-    return maisNovo
-}
-
-function qtdePessima(pessoas) {
-    qtdePessimo = 0
-}
-
-function mostraTudo(){
-    alert("A média de idade é: " + mediaIdade(matrizObj.length, somaIdades) +
-    "\nA pessoa mais velha é: " + mediaIdade(matrizObj) +
-    "\nA pessoa mais nova é: " + mediaIdade(matrizObj))
-}
