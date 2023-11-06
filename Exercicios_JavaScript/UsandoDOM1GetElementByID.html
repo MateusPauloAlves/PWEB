@@ -16,17 +16,19 @@
 	<br>
 	ESCOLHA1: <input type="checkbox" name="check" >
 	ESCOLHA2: <input type="checkbox" name="check" >
-
+	<button onclick="executa();">clique aqui</button>
 
 	<script>
-		txt = document.getElementById("primeiro").innerText;
-		document.write("<p>Texto do parágrafo primeiro: " + txt + "</p>");
-		
-		var x = document.getElementsByName("check");
-		var i;
-		for (i = 0; i < x.length; i++) {
-			if (x[i].type == "checkbox") {
-				x[i].checked = true;
+		function executa() {
+			txt = document.getElementById("primeiro").innerText;
+			document.write("<p>Texto do parágrafo primeiro: " + txt + "</p>");
+			
+			var x = document.getElementsByName("check");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				if (x[i].type == "checkbox") {
+					x[i].checked = true;
+				}
 			}
 		}
 	</script>
